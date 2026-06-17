@@ -1,0 +1,215 @@
+
+*{ box-sizing: border-box; margin: 0; padding: 0;
+
+}
+ body{
+     font: 1em sans-serif;
+     color: #333;
+     background-color: #0F172A;
+ }
+ .nav-link{
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    color: white;
+    gap: 10px;
+    padding: 20px;
+  font-size: 20px;
+  margin-top: 40px;
+ }
+ .nav-link span{
+  color: orange;
+
+ }
+ .nav-link a{
+    padding: 10px;
+    gap: 20px;
+    text-decoration: none; 
+    color:white;
+    border: 1px solid;
+    border-radius: 8px;
+    margin-top: 10px;
+    
+ }
+ .nav-link a:hover{
+   transition: all 0.3s;
+   color: #b19d9d;
+
+ }
+ .nav-link a.active{
+    color:#38BDF8;
+    border-bottom:2px solid #38BDF8;
+ }
+ .idro{
+   display: block;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    margin: 10px;
+   
+ }
+ .idro p{
+    padding: 20px;
+    margin: auto;
+ }
+ span{
+   color: blue;
+ }
+ .hrf{
+     display: inline-block;
+    padding: 13px;
+    color:orange;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 30px;
+ }
+  .hrf:hover {
+  transition: all 0.3s ease;
+  background-color: aliceblue;
+  color: black;
+}
+ @media (max-width: 768px) {
+  .nav-link {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .idro h2 {
+    font-size: 1.4em;
+  }
+
+  .idro p {
+    font-size: 0.9em;
+  }
+
+ }
+ 
+.abt {
+   text-align: center;
+   padding: 20px;
+   margin-top: 30px;
+   color: white;
+}
+
+.para {
+   text-align: center;
+   padding: 30px;
+   margin-top: 50px;
+   color:lightgray;
+}
+
+hr {
+   border: 1px solid;
+}
+.skill-info {
+  text-align: center;
+  padding: 40px;
+  color: #475569;
+}
+
+.skill-info h1 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.ul-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.ul-list li {
+  padding: 10px 20px;
+  border: 1px solid #e0e5e7;
+  border-radius: 8px;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ul-list li:hover {
+  background-color: orange;
+  color: #0F172A;
+}
+.contact-card {
+  background: #1E293B;
+  border: 0.5px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-size: 13px;
+  color: #94A3B8;
+}
+
+.form-group input,
+.form-group textarea {
+  background: #0F172A;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: white;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #38BDF8;
+}
+
+.form-group textarea {
+  resize: none;
+  height: 110px;
+}
+
+.send-btn {
+  width: 100%;
+  padding: 12px;
+  background: orange;
+  color: #0F172A;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.send-btn:hover {
+  background: #ffb300;
+}
+
+.social-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 1.5rem;
+}
+
+.social-btn {
+  padding: 8px 18px;
+  border: 1px solid rgba(255,165,0,0.5);
+  border-radius: 8px;
+  color: orange;
+  background: transparent;
+  cursor: pointer;
+}
+
+.social-btn:hover {
+  background: rgba(255,165,0,0.12);
+}
