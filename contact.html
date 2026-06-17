@@ -23,40 +23,86 @@
 
     <div class="contact-card">
 
-        <div style="display:flex; gap:16px;">
-            <div class="form-group" style="flex:1;">
+        <div class="form-row">
+            <div class="form-group">
                 <label>Name</label>
-                <input type="text" placeholder=" Name" />
+                <input type="text" id="name" placeholder="Aapka naam" />
+                <span class="err-msg" id="name-err">Name zaroor likhein</span>
             </div>
-            <div class="form-group" style="flex:1;">
+            <div class="form-group">
                 <label>Email</label>
-                <input type="email" placeholder="email@example.com" />
+                <input type="email" id="email" placeholder="email@example.com" />
+                <span class="err-msg" id="email-err">Sahi email likhein</span>
             </div>
         </div>
 
         <div class="form-group">
             <label>Subject</label>
-            <input type="text" placeholder="Subject " />
+            <input type="text" id="subject" placeholder="Subject likhein" />
+            <span class="err-msg" id="subject-err">Subject zaroor likhein</span>
         </div>
 
         <div class="form-group">
             <label>Message</label>
-            <textarea placeholder=" Message"></textarea>
+            <textarea id="message" placeholder="Apna message yahan likhein..."></textarea>
+            <span class="err-msg" id="message-err">Message zaroor likhein</span>
         </div>
 
-        <button class="send-btn">Send Message</button>
+        <button class="send-btn" onclick="sendForm()">Send Message</button>
 
-        <div style="text-align:center; margin:1.5rem 0 1rem; color:#475569; font-size:13px;">
-            — ya social media pe bhi contact karein —
+        <div class="success-msg" id="success">
+            Message send ho gaya! Jald reply karunga.
         </div>
+
+        <div class="social-divider">— ya social media pe bhi contact karein —</div>
 
         <div class="social-row">
-            <a href="https://github.com" class="social-btn">GitHub</a>
-            <a href="https://linkedin.com" class="social-btn">LinkedIn</a>
-            <a href="https://instagram.com" class="social-btn">Instagram</a>
+            <a href="https://github.com/username" class="social-btn">GitHub</a>
+            <a href="https://linkedin.com/in/username" class="social-btn">LinkedIn</a>
+            <a href="https://instagram.com/username" class="social-btn">Instagram</a>
         </div>
 
     </div>
+
+    <script>
+        function sendForm() {
+            var ok = true;
+
+            var fields = ['name', 'subject', 'message'];
+            fields.forEach(function(f) {
+                var el = document.getElementById(f);
+                var er = document.getElementById(f + '-err');
+                if (!el.value.trim()) {
+                    el.style.borderColor = '#f87171';
+                    er.style.display = 'block';
+                    ok = false;
+                } else {
+                    el.style.borderColor = 'rgba(255,255,255,0.15)';
+                    er.style.display = 'none';
+                }
+            });
+
+            var email = document.getElementById('email');
+            var emailErr = document.getElementById('email-err');
+            var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value);
+            if (!emailOk) {
+                email.style.borderColor = '#f87171';
+                emailErr.style.display = 'block';
+                ok = false;
+            } else {
+                email.style.borderColor = 'rgba(255,255,255,0.15)';
+                emailErr.style.display = 'none';
+            }
+
+            if (ok) {
+                document.getElementById('success').style.display = 'block';
+                document.getElementById('name').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('subject').value = '';
+                document.getElementById('message').value = '';
+            }
+        }
+    </script>
 
 </body>
 </html>
