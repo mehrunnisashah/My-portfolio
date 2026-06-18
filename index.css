@@ -220,33 +220,8 @@ hr {
     font-size: 14px;
 }
 
-.social-divider {
-    text-align: center;
-    margin: 1.5rem 0 1rem;
-    color: #475569;
-    font-size: 13px;
-}
 
-.social-row {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
-}
 
-.social-btn {
-    padding: 8px 16px;
-    border: 1px solid rgba(255,165,0,0.5);
-    border-radius: 8px;
-    color: orange;
-    text-decoration: none;
-    font-size: 13px;
-    transition: background 0.2s;
-}
-
-.social-btn:hover {
-    background: rgba(255,165,0,0.12);
-}
  @media (max-width: 480px) {
   .form-row {
     grid-template-columns: 1fr; /* 2 col → 1 col on mobile */
